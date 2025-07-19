@@ -45,3 +45,21 @@ h2 {
         background-position: 0% 50%;
     }
 }
+@media (max-width: 600px) {
+    h1 {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+    h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+    .loader {
+        width: 40px;
+        height: 40px;
+        border-width: 6px;
+    }
+    body {
+        padding: 10px;
+    }
+}
