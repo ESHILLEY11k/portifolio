@@ -1,37 +1,55 @@
-h1 {color:rgb(0, 0, 0);
-font-size: 50px;
+h1 {
+    color: rgb(0, 0, 0);
+    font-size: 50px;
     text-align: center;
- { 
-            border: 8px solid 
-            border-top: 8px solid 
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            animation: spin 1s linear infinite;
-            margin: 40px auto;
-    {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 50;                                                
 }
 
-h2 {color: color(srgb rgb(65, 63, 63) rgb(255, 255, 255) rgb(0, 0, 0));}
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: 40px auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Use apenas um body e corrija o background */
 body {
     display: flex;
+    flex-direction: column; /* Alinha os elementos verticalmente */
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 50;
-
-     background: linear-gradient(-45deg, #7e6f6f, #000000, #ffffff, #23d5ab);
+    margin: 0;
+    background: linear-gradient(-45deg, #7e6f6f, #000000, #ffffff, #23d5ab);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
 }
 
-{
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
+/* Corrija a cor do h2 */
+h2 {
+    color: rgb(65, 63, 63);
+}
+
+/* Corrija a animação do gradiente */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
