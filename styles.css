@@ -62,4 +62,77 @@ h2 {
     body {
         padding: 10px;
     }
+}h1 {
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    text-align: center;
+    margin-top: 50px;
+}
+h1 span {
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(-45deg, #918d8d, #796d6d, #ffffff, #9cb933);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+h2 {
+    color: rgb(65, 63, 63);
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+    h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+    .loader {
+        width: 40px;
+        height: 40px;
+        border-width: 6px;
+    }
+    body {
+        padding: 10px;
+    }
+}
+.whatsapp-fixo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
 }
