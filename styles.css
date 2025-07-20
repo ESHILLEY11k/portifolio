@@ -1,90 +1,3 @@
-h1 {
-    color: rgb(3, 2, 1);
-    font-size: 50px;
-    text-align: center;
-    margin-top: 70px;
-}
-
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-/* Use apenas um body e corrija o background */
-body {
-    display: flex;
-    flex-direction: column; /* Alinha os elementos verticalmente */
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-   background: linear-gradient(-45deg, #918d8d, #796d6d, #ffffff, #9cb933);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-}
-
-/* Corrija a cor do h2 */
-h2 {
-    color: rgb(65, 63, 63);
-}
-
-/* Corrija a animação do gradiente */
-@keyframes gradientBG {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-@media (max-width: 600px) {
-    h1 {
-        font-size: 28px;
-        margin-top: 20px;
-    }
-    h2 {
-        font-size: 18px;
-        text-align: center;
-    }
-    .loader {
-        width: 40px;
-        height: 40px;
-        border-width: 6px;
-    }
-    body {
-        padding: 10px;
-    }
-}h1 {
-    color: rgb(0, 0, 0);
-    font-size: 50px;
-    text-align: center;
-    margin-top: 50px;
-}
-h1 span {
-    color: rgb(0, 0, 0);
-    font-size: 50px;
-    text-align: center;
-    font-weight: bold;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-
 body {
     display: flex;
     flex-direction: column;
@@ -95,23 +8,53 @@ body {
     background: linear-gradient(-45deg, #918d8d, #796d6d, #ffffff, #9cb933);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
+    background-image: url('sua-imagem.jpg'); /* Troque pelo nome da sua imagem, se quiser */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    text-align: center;
+    margin-top: 40px;
 }
 
 h2 {
     color: rgb(65, 63, 63);
+    text-align: center;
 }
 
-@keyframes gradientBG {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: 40px auto;
 }
+
+@keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+
+.whatsapp-fixo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Responsividade para mobile */
 @media (max-width: 600px) {
     h1 {
         font-size: 28px;
@@ -119,7 +62,6 @@ h2 {
     }
     h2 {
         font-size: 18px;
-        text-align: center;
     }
     .loader {
         width: 40px;
@@ -129,10 +71,4 @@ h2 {
     body {
         padding: 10px;
     }
-}
-.whatsapp-fixo {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
 }
