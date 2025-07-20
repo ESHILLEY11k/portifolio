@@ -8,7 +8,7 @@ body {
     background: linear-gradient(-45deg, #918d8d, #796d6d, #ffffff, #9cb933);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
-    background-image: url('sua-imagem.jpg'); /* Troque pelo nome da sua imagem, se quiser */
+    background-image: url('logo.png'); /* Troque pelo nome da sua imagem, se quiser */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
